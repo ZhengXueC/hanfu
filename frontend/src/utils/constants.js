@@ -48,7 +48,7 @@ export const products_url = 'https://hanfu-axjb.onrender.com/api/products'
 //
 //'https://course-api.com/react-store-products'
 
-export const single_product_url = 'https://hanfu-axjb.onrender.com/api/products/byId'
+export const single_product_url = 'https://hanfu-axjb.onrender.com/api/products/byId/'
 //`http://localhost:4000/api/products/byId/`
 //`https://course-api.com/react-store-single-product?id=`
 
