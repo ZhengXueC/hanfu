@@ -14,8 +14,8 @@ import { useUserContext } from "../context/usercontext";
 import { formatPrice } from "../reducers/helpers";
 import { Alert, Snackbar } from "@mui/material";
 
-const promise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISH_KEY);
-
+//const promise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISH_KEY);
+const promise = loadStripe('pk_test_51OQzU9ExmYKuLPGzbC4ZsDhTyDWXqzUJ4Ci486bhTKmjfj2OyqZSIj7azttAWXOeMrfMgng3q9MMncFrTGHjflbe00TwGRtn8x');
 const CheckoutForm = () => {
   const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
