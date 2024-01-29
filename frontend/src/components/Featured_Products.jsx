@@ -1,5 +1,6 @@
 import { UseProductsProvider } from '../context/products_context'
 // import Skeleton from 'react-loading-skeleton'
+import { useTranslation } from "react-i18next";
 import { Skeleton } from '@mui/material'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { SingleProductView } from './SingleProductView'
@@ -22,11 +23,11 @@ const Featured_Products = () => {
           </div>
         )
       })
-
+      const{t} = useTranslation()
     return (
         <div className="featuredProducts mt-24 p-5 flex flex-col justify-center w-full gap-4">
             <div className="header text-center flex items-center gap-4 flex-col text-3xl mb-9 font-bold">
-                Featured Products
+            {t('Featured_Products')}
                 <div className="underline w-28 h-1 bg-[#9b9b9a]"></div>
             </div>
             <div className="products flex gap-8 flex-wrap justify-center">
@@ -44,7 +45,7 @@ const Featured_Products = () => {
                 <Link
                     to='products'
                     className='bg-[#818181] rounded-md transition hover:text-[#1c1c1c] hover:bg-[#b1b1b1] text-white justify-center flex w-32 p-2'>
-                All Products
+                  {t('All_Products')}
             </Link>
         </div>
         </div>

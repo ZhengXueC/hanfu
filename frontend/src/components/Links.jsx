@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
 import { useUserContext } from '../context/usercontext'
-
+import { useTranslation } from "react-i18next";
 const Links = ({ showMenu, setShowMenu }) => {
   const {myUser} = useUserContext()
-    return (
+  const{t} = useTranslation()
+  return (
     <div
     className="text-lg hidden md:flex"
     style={{
@@ -13,10 +14,10 @@ const Links = ({ showMenu, setShowMenu }) => {
     <ul
       className='relative'
     >
-        <Link className='link' to='/'>Home</Link>
-        <Link className='link' to='/about'>About</Link>
-          <Link className='link' to='/products'>Products</Link>
-          {myUser && <Link className='link' to='/checkout'>Checkout</Link>}
+        <Link className='link' to='/'>{t('Home')}</Link>
+        <Link className='link' to='/about'>{t('About')}</Link>
+          <Link className='link' to='/products'>{t('Products')}</Link>
+          {myUser && <Link className='link' to='/checkout'>{t('Checkout')}</Link>}
         </ul>
   </div>
   )

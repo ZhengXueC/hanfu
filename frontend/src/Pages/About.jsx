@@ -1,8 +1,10 @@
 import React from 'react'
+import { useTranslation } from "react-i18next";
 import  Hero  from '../assets/hero.png'
 import PageHero from '../components/PageHero'
 
 const About = () => {
+    const{t} = useTranslation()
   return (
       <>
       
@@ -17,22 +19,11 @@ const About = () => {
           </div>
           <div className="info mb-8 lg:mb-0 lg:h-[80vh] lg:w-1/2 flex flex-col justify-center items-center lg:items-start">
               <div className="header ml-6 flex flex-col justify-center items-start mb-6">
-                <div className="text-4xl font-bold" color='#102a42'>Our Story</div>
+                <div className="text-4xl font-bold" color='#102a42'>{t('Our_Story')}</div>
                 <div className="underLine bg-[#617d98] w-20 h-1 mt-2 ml-1"></div>
             </div>
               <p className='text-xl lg:w-[80%] w-[100%] ml-6 lg:ml-8 lg:m-0'>
-              The HanfuTale emerged from a deep-rooted passion for unraveling the essence of Chinese culture 
-          and sharing its exquisite beauty with the global community. Our mission is to select a collection 
-          that not only reflects the intricacies of Hanfu design but also encapsulates the stories woven 
-          into each garment, offering wearers a journey back to the golden age of Chinese arts and culture.
-          
-          We firmly believe that Hanfu transcends cultural backgrounds, providing a transformative and 
-          enlightening experience in Chinese culture and arts for all. By embracing Hanfu and showcasing 
-          its allure, individuals can forge a profound connection with and appreciation for this rich heritage.
-
-           In our endeavor, we are committed to promoting equality and inclusivity, ensuring that everyone, 
-           irrespective of background, has the opportunity to engage with or rediscover the cultural essence 
-           embodied by Hanfu.
+              {t('The_HanfuTale_emerged')}
               </p>
           </div>
     </section>

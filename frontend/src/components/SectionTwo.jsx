@@ -1,19 +1,22 @@
 import React from 'react'
+import { useTranslation } from "react-i18next";
 import {GiCompass, GiDiamondHard, GiStabbedNote} from 'react-icons/gi'
 const SectionTwo = () => {
-  return (
+    const{t} = useTranslation()
+    return (
       <section className='m-h-[25vh]  my-20 py-5'>
           <div className="section bg-[#eeeeee] h-[400px] flex">
               <div className="header w-full flex flex-col lg:flex-row lg:justify-around m-5 lg:m-0 lg:items-center relative lg:top-[-100px]" >
               <h3 className='text-[#171717] font-bold' style={{
                   fontSize: '30px'
               }}>
-                Custom Hanfu
+                {t('Custom_Hanfu')}
                 <br />
-                Only For You
+                {t('Only_For_You')}
               </h3>
               <p className='text-[#737373]'>
-              Remember, this is just a conceptual idea, and the design should ultimately reflect your personal style, prefere7nces,  <br/> and the occasion for which you intend to wear the Hanfu. Working with a skilled tailor or designer can help bring your custom Hanfu design to life.
+              {t('Remember')}<br/>
+              {t('and_the_occasion')}
               </p>
           </div>
           </div>
@@ -25,8 +28,7 @@ const SectionTwo = () => {
                   <div className="info w-[90%] lg:w-[400px] text-center flex flex-col items-center">
                       <h2 className='font-bold text-3xl text-[#ffffff]'>Misson</h2>
                       <p className=' leading-7 mt-4 w-[100%] lg:w-[368px] text-[#ffffff] text-center'>
-                      Preserve and protect traditional Han Chinese clothing as an integral part of China's cultural heritage &
-                      Document historical clothing styles, patterns, and techniques.
+                      {t('Preserve')}
                       </p>
                   </div>
               </div>
@@ -38,7 +40,7 @@ const SectionTwo = () => {
                   <div className="info w-[90%] lg:w-[400px] text-center flex flex-col items-center">
                       <h2 className='font-bold text-3xl text-[#ffffff]'>Vision</h2>
                       <p className=' leading-7 mt-4 w-[100%] lg:w-[368px] text-[#ffffff] text-center'>
-                      This cultural movement has gained momentum in recent years, driven by individuals and communities seeking to reconnect with China's rich historical and cultural heritage. 
+                      {t('This_cultural_movement')}
                       </p>
                   </div>
               </div>
@@ -48,11 +50,11 @@ const SectionTwo = () => {
                       <GiStabbedNote className='text-4xl'/>
                   </div>
                   <div className="info w-[90%] lg:w-[400px] text-center flex flex-col items-center">
-                      <h2 className='font-bold text-3xl text-[#ffffff]'>History</h2>
+                      <h2 className='font-bold text-3xl text-[#ffffff]'>{t('History')}</h2>
                       <p className=' leading-7 mt-4 w-[100%] lg:w-[368px] text-[#ffffff] text-center'>
-                      Sui (581–618) and Tang (618–907) Dynasties {'\n'}
-                      Song (960–1279) and Yuan (1271–1368) Dynasties {'\n'}
-                      Ming (1368–1644) and Qing (1644–1912) Dynasties
+                      Sui (581–618) {t('and')} Tang (618–907) Dynasties {'\n'}
+                      Song (960–1279) {t('and')} Yuan (1271–1368) Dynasties {'\n'}
+                      Ming (1368–1644) {t('and')} Qing (1644–1912) Dynasties
                       </p>
                   </div>
               </div>

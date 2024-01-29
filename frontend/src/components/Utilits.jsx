@@ -1,15 +1,17 @@
 import React from 'react'
+import { useTranslation } from "react-i18next";
 import { FaCartShopping } from 'react-icons/fa6'
 import CardButton from './CardButton'
 import { UseCartContext } from '../context/cart_context'
 import { Link } from 'react-router-dom'
 const Utilits = ({ style }) => {
   const {total_items, cart} = UseCartContext()
+  const{t} = useTranslation()
   return (
     <div className="utilits hidden md:flex w-full justify-center md:w-72" style={{display: style}}>
         <div className="card flex gap-4 justify-center">
           <Link  to='/cart' style={{color: '#102a42'}} className='flex relative items-center text-2xl gap-1 cursor-pointer'>
-            Cart
+          {t('Cart')}
           <div  className='cart'>
             <div
               className=

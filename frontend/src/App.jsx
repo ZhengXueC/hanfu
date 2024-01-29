@@ -1,5 +1,6 @@
 import "./App.css";
 import React from 'react'
+
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./Pages/Home";
 import Navbar from "./Pages/Navbar";
@@ -14,11 +15,30 @@ import CartPage from "./Pages/CartPage";
 import ReqireAuth from "./components/ReqireAuth";
 import styled from 'styled-components';
 import BackgroundImage from "./assets/backgroundImage.png"
+
+
+
+
+
+
 function App() {
+  
   return (
     <BrowserRouter>
+
+
+        
+     
+         
+
       <BackgroundContainer> 
+     
       <Navbar />
+
+      
+
+
+
       <Routes>
         <Route
           index
